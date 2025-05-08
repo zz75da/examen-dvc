@@ -1,23 +1,9 @@
 stages:
   prepare:
-    cmd: python src/data/make_dataset.py
+    cmd: python src/data/del_dt.py
     deps:
-    - data/raw
-    - src/data/make_dataset.py
+    - data/raw/raw.csv
+    - src/data/del_dt.py
     outs:
-    - data/preprocessed
-  train:
-    cmd: python src/models/gs_train_model.py
-    deps:
-    - data/preprocessed
-    - src/models/gs_train_model.py
-    outs:
-    - models/trained_model.pkl
-  evaluation:
-    cmd: python src/models/evaluate_model.py
-    deps:
-    - models/trained_model.pkl
-    - src/models/evaluate_model.py
-    metrics:
-    - metrics/scores.json:
-        cache: false
+    - data/processed/raw_cleaned.csv
+
