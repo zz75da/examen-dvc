@@ -16,3 +16,12 @@ stages:
     - data/split/X_train.csv
     - data/split/y_test.csv
     - data/split/y_train.csv
+  normalize:
+    cmd: python src/features/normalize_data.py
+    deps:
+    - data/split/X_test.csv
+    - data/split/X_train.csv
+    - src/features/normalize_data.py
+    outs:
+    - data/normalized/X_test_scaled.csv
+    - data/normalized/X_train_scaled.csv
