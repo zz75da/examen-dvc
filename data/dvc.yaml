@@ -1,0 +1,8 @@
+stages:
+  prepare:
+    cmd: python data/del_dt.py
+    deps:
+    - data/del_dt.py
+    - data/raw
+    outs:
+    - data/preprocessed

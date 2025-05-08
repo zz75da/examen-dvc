@@ -4,3 +4,5 @@
 /prediction.csv
 /raw
 /preprocessed
+/split
+/normalized
