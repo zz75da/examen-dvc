@@ -98,4 +98,31 @@
       hash: md5
       md5: befb70a6ea13ae09803dfd824e91f32f
       size: 69
+<<<<<<< HEAD
 >>>>>>> Add gridsearch stage
+=======
+  training:
+    cmd: python src/models/train_model.py
+    deps:
+    - path: data/normalized/X_train_scaled.csv
+      hash: md5
+      md5: c1b80eb7f083888b625dd0369cf381f8
+      size: 227497
+    - path: data/split/y_train.csv
+      hash: md5
+      md5: 5f8aa77e7118c62359074ed355041f85
+      size: 25946
+    - path: models/best_params.pkl
+      hash: md5
+      md5: befb70a6ea13ae09803dfd824e91f32f
+      size: 69
+    - path: src/models/train_model.py
+      hash: md5
+      md5: 8acfd0bd652072376a622f57cf1028a4
+      size: 410
+    outs:
+    - path: models/trained_model.pkl
+      hash: md5
+      md5: eb9cbb969989078672c280417dd6de47
+      size: 7767265
+>>>>>>> Add training stage
