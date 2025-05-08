@@ -16,21 +16,31 @@
   split:
     cmd: python src/data/split_data.py
     deps:
-    - path: data/raw
+    - path: data/processed/raw_cleaned.csv
       hash: md5
-      md5: 5b4249a052a3606e672bfb87a782b585.dir
-      size: 628128
-      nfiles: 2
-    - path: data/split_data.py
+      md5: d0fd98a2cb6e70699c20c0997cb25d5b
+      size: 294371
+    - path: src/data/split_data.py
       hash: md5
-      md5: a3be3173ada85d13db5d69c868068603
-      size: 513
+      md5: 2de2db4a2c0797c738150096ebdeb22c
+      size: 519
     outs:
-    - path: data/split
+    - path: data/split/X_test.csv
       hash: md5
-      md5: ff7e96a1686b5092bcfa1c128a5940a8.dir
-      size: 294418
-      nfiles: 4
+      md5: 70060d3ab969c85d57b92d62907363d9
+      size: 52617
+    - path: data/split/X_train.csv
+      hash: md5
+      md5: 67440abcc55e06fbd232acf5aa7a9669
+      size: 209403
+    - path: data/split/y_test.csv
+      hash: md5
+      md5: 70968fa4615f00f21dcc604a25be2da3
+      size: 6452
+    - path: data/split/y_train.csv
+      hash: md5
+      md5: 5f8aa77e7118c62359074ed355041f85
+      size: 25946
   normalize:
     cmd: python data/normalize_data.py
     deps:
