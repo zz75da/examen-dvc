@@ -6,3 +6,13 @@ stages:
     - src/data/del_dt.py
     outs:
     - data/processed/raw_cleaned.csv
+  split:
+    cmd: python src/data/split_data.py
+    deps:
+    - data/processed/raw_cleaned.csv
+    - src/data/split_data.py
+    outs:
+    - data/split/X_test.csv
+    - data/split/X_train.csv
+    - data/split/y_test.csv
+    - data/split/y_train.csv
