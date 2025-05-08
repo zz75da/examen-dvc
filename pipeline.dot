@@ -1,0 +1,13 @@
+strict digraph {
+"prepare";
+"split";
+"normalize";
+"gridsearch";
+"data/raw.dvc";
+"prepare" -> "split";
+"split" -> "normalize";
+"split" -> "gridsearch";
+"normalize" -> "gridsearch";
+"data/raw.dvc" -> "prepare";
+}
+
