@@ -71,4 +71,31 @@
 =======
       md5: c1b80eb7f083888b625dd0369cf381f8
       size: 227497
+<<<<<<< HEAD
 >>>>>>> Add normalize stage
+=======
+  gridsearch:
+    cmd: python src/models/grid_search_model.py
+    deps:
+    - path: data/normalized/X_train_scaled.csv
+      hash: md5
+      md5: c1b80eb7f083888b625dd0369cf381f8
+      size: 227497
+    - path: data/split/y_train.csv
+      hash: md5
+      md5: 5f8aa77e7118c62359074ed355041f85
+      size: 25946
+    - path: params.yaml
+      hash: md5
+      md5: f42b1ffb3e77e88acc6c6087430600b0
+      size: 93
+    - path: src/models/grid_search_model.py
+      hash: md5
+      md5: 4774d435bbff069728c8907cade7af6c
+      size: 789
+    outs:
+    - path: models/best_params.pkl
+      hash: md5
+      md5: befb70a6ea13ae09803dfd824e91f32f
+      size: 69
+>>>>>>> Add gridsearch stage
