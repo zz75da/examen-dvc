@@ -1,3 +1,4 @@
+  prepare  
     cmd: python src/data/del_dt.py
     deps:
     - path: data/raw/raw.csv
@@ -63,17 +64,6 @@
       size: 57026
     - path: data/normalized/X_train_scaled.csv
       hash: md5
-<<<<<<< HEAD
-      md5: 8722aa5c515eba7c6fa28f390621b13d.dir
-      size: 284523
-      nfiles: 2
-
-=======
-      md5: c1b80eb7f083888b625dd0369cf381f8
-      size: 227497
-<<<<<<< HEAD
->>>>>>> Add normalize stage
-=======
   gridsearch:
     cmd: python src/models/grid_search_model.py
     deps:
@@ -98,9 +88,6 @@
       hash: md5
       md5: befb70a6ea13ae09803dfd824e91f32f
       size: 69
-<<<<<<< HEAD
->>>>>>> Add gridsearch stage
-=======
   training:
     cmd: python src/models/train_model.py
     deps:
@@ -125,9 +112,6 @@
       hash: md5
       md5: eb9cbb969989078672c280417dd6de47
       size: 7767265
-<<<<<<< HEAD
->>>>>>> Add training stage
-=======
   evaluate:
     cmd: python src/models/evaluate_model.py
     deps:
@@ -156,4 +140,3 @@
       hash: md5
       md5: d0c505e5001bcb07e9585f982d55e954
       size: 64
->>>>>>> Add evaluate stage
