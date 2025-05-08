@@ -42,21 +42,33 @@
       md5: 5f8aa77e7118c62359074ed355041f85
       size: 25946
   normalize:
-    cmd: python data/normalize_data.py
+    cmd: python src/features/normalize_data.py
     deps:
-    - path: data/normalize_data.py
+    - path: data/split/X_test.csv
       hash: md5
-      md5: 0e092b44f45d31f49ef645b5394eb317
-      size: 557
-    - path: data/raw
+      md5: 70060d3ab969c85d57b92d62907363d9
+      size: 52617
+    - path: data/split/X_train.csv
       hash: md5
-      md5: 5b4249a052a3606e672bfb87a782b585.dir
-      size: 628128
-      nfiles: 2
+      md5: 67440abcc55e06fbd232acf5aa7a9669
+      size: 209403
+    - path: src/features/normalize_data.py
+      hash: md5
+      md5: afc624b388a59f81f961e86757a3bdf1
+      size: 511
     outs:
-    - path: data/normalized
+    - path: data/normalized/X_test_scaled.csv
       hash: md5
+      md5: 5e079189af6bd091d651a89fafb1c290
+      size: 57026
+    - path: data/normalized/X_train_scaled.csv
+      hash: md5
+<<<<<<< HEAD
       md5: 8722aa5c515eba7c6fa28f390621b13d.dir
       size: 284523
       nfiles: 2
 
+=======
+      md5: c1b80eb7f083888b625dd0369cf381f8
+      size: 227497
+>>>>>>> Add normalize stage
